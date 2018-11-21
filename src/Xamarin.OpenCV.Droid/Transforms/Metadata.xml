@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-    <attr
-        path="/api/package[@name='org.opencv.android']/class[@name='CameraGLRendererBase']/method[@name='setCameraPreviewSize' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
-        name="visibility">public</attr>
-    <attr
-        path="/api/package[@name='org.opencv.android']/class[@name='Camera2Renderer']/method[@name='setCameraPreviewSize' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
-        name="visibility">public</attr>
+  <!--Fix Skipping xxx due to duplicate field, Method, Property-->
+  <attr
+        path="api/package[@name='org.opencv.core']/class[@name='Core']/field[@name='VERSION_MAJOR']"
+        name="managedName">VersionMajorE</attr>
+  <attr
+        path="api/package[@name='org.opencv.core']/class[@name='Core']/field[@name='VERSION_MINOR']"
+        name="managedName">VersionMinorE</attr>
+  <attr
+        path="api/package[@name='org.opencv.core']/class[@name='Core']/field[@name='VERSION_REVISION']"
+        name="managedName">VersionRevisionE</attr>
+  <attr
+        path="api/package[@name='org.opencv.ml']/class[@name='SVM']/field[@name='DEGREE']"
+        name="managedName">DegreeE</attr>
+  <attr
+        path="api/package[@name='org.opencv.ml']/class[@name='SVM']/field[@name='NU']"
+        name="managedName">NuE</attr>
+  <attr
+        path="api/package[@name='org.opencv.ml']/class[@name='SVM']/field[@name='GAMMA']"
+        name="managedName">GammaE</attr>
 
-    <attr path="/api/package[@name='org.opencv.android']/class[@name='CameraBridgeViewBase']/method[@name='setCvCameraViewListener' and count(parameter)=1 and parameter[1][@type='org.opencv.android.CameraBridgeViewBase.CvCameraViewListener2']]"
-          name="managedName">SetCvCameraViewListener2</attr>
+  <attr
+        path="api/package[@name='org.opencv.features2d']/class[@name='FastFeatureDetector']/field[@name='THRESHOLD']"
+        name="managedName">ThresholdE</attr>
+  <attr
+        path="api/package[@name='org.opencv.features2d']/class[@name='FastFeatureDetector']/field[@name='NONMAX_SUPPRESSION']"
+        name="managedName">NonMaxSuppressionE</attr>
+  <attr
+        path="api/package[@name='org.opencv.features2d']/class[@name='AgastFeatureDetector']/field[@name='NONMAX_SUPPRESSION']"
+        name="managedName">ThresholdE</attr>
+  <attr
+        path="api/package[@name='org.opencv.features2d']/class[@name='AgastFeatureDetector']/field[@name='NONMAX_SUPPRESSION']"
+        name="managedName">NonMaxSuppressionE</attr>
+  <!--Fix incorrect Visibility-->
+  <attr
+      path="/api/package[@name='org.opencv.android']/class[@name='CameraGLRendererBase']/method[@name='setCameraPreviewSize' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
+      name="visibility">public</attr>
+  <attr
+      path="/api/package[@name='org.opencv.android']/class[@name='Camera2Renderer']/method[@name='setCameraPreviewSize' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
+      name="visibility">public</attr>
+  <!--Fix Duplicate Method-->
+  <attr path="/api/package[@name='org.opencv.android']/class[@name='CameraBridgeViewBase']/method[@name='setCvCameraViewListener' and count(parameter)=1 and parameter[1][@type='org.opencv.android.CameraBridgeViewBase.CvCameraViewListener2']]"
+        name="managedName">SetCvCameraViewListener2</attr>
 </metadata>
